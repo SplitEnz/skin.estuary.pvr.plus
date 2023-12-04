@@ -5,5 +5,6 @@
     <rule field="videoresolution" operator="greaterthan">
         <value>1080</value>
     </rule>
+	<limit>30</limit>
 	 <order direction="descending">random</order>
 </smartplaylist>

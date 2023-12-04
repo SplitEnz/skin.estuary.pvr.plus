@@ -22,7 +22,7 @@
 				<width>1550</width>
 				<height>343</height>
 				<top>-45</top>
-				<texture colordiffuse="80FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
 			</control>
 				<control type="image">
 				<left>375</left>

@@ -234,6 +234,13 @@
 		<value condition="Player.Rewinding">$LOCALIZE[31038] $VAR[VideoPlayerForwardRewindVar]</value>
 		<value condition="Player.IsTempo">$LOCALIZE[31142]: $INFO[Player.PlaySpeed]</value>
 	</variable>
+	<variable name="LiveTV_SeekLabel">
+		<value condition="!String.IsEmpty(Player.SeekStepSize)">[COLOR button_focus]$LOCALIZE[773][/COLOR] $INFO[Player.SeekStepSize]</value>
+		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.DisplayAfterSeek">[COLOR button_focus]$LOCALIZE[773][/COLOR] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.Forwarding">$LOCALIZE[31039] $VAR[VideoPlayerForwardRewindVar]</value>
+		<value condition="Player.Rewinding">$LOCALIZE[31038] $VAR[VideoPlayerForwardRewindVar]</value>
+		<value condition="Player.IsTempo">$LOCALIZE[31142]: $INFO[Player.PlaySpeed]</value>
+	</variable>
 	<variable name="SeekTimeLabelVar">
 		<value condition="!String.IsEmpty(Player.SeekNumeric)">[B]$INFO[Player.SeekNumeric(hh:mm:ss)][/B]</value>
 		<value condition="Player.Seeking + VideoPlayer.HasEPG">$INFO[PVR.EpgEventSeekTime]$INFO[PVR.EpgEventDuration, / ]</value>
@@ -716,6 +723,13 @@
 		<value condition="String.IsEqual(VideoPlayer.Mpaa,Mature)">Mature</value>
 		<value condition="String.IsEqual(VideoPlayer.Mpaa,Teen)">Teen</value>
 	</variable>
+	
+	<variable name="PVR_Info_Panal_MPAAVar">
+		<!-- New SkinHelper variables added to test MPAA on PVR Items (MPAA Does not seem to work for Live TV) -->	
+		<value condition="!String.IsEqualWindow(Home).Property(SkinHelper.Player.MPAA,UK:12A)">BBFC_12A_Certificate_UK</value>
+		<value condition="!String.IsEqualWindow(Home).Property(SkinHelper.Player.MPAA,UK:15)">BBFC_15_Certificate_UK</value>
+	</variable>	
+		
 	<variable name="NowPlayingMPAAVar">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.MPAA]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.MPAA]</value>
@@ -830,6 +844,15 @@
 		<value condition="VideoPlayer.Content(episodes)">plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[VideoPlayer.TvShowTitle]</value>
 		<value condition="VideoPlayer.Content(livetv)">plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[VideoPlayer.Title]</value>
 	</variable>
+	<variable name="PVR_Movie_Year_Guide_Screen_VAR">
+		<value condition="String.Contains(ListItem.Genre,Movie)">$INFO[ListItem.Year,(,)]</value>
+	</variable>
+	<variable name="PVR_Movie_Year_VAR">
+		<value condition="String.Contains(ListItem.Genre,Movie)">$INFO[ListItem.Year,(,)]</value>
+	</variable>
+	<variable name="PVR_Movie_Year_LiveTV_OSD_VAR">
+		<value condition="String.Contains(VideoPlayer.Genre,Movie)">$INFO[VideoPlayer.Year,(,)]</value>
+	</variable>
 	<variable name="PVR_HDTV_Var">
 		<value condition="String.EndsWith(ListItem.ChannelName,UHD)">uhd</value>
 		<value condition="String.EndsWith(ListItem.ChannelName,HD)">hdtv</value>
@@ -841,6 +864,14 @@
 		<value condition="String.EndsWith(VideoPlayer.ChannelName,HD)">hdtv</value>
 		<value condition="String.EndsWith(VideoPlayer.ChannelName,FHD)">hdtv</value>
 		<value condition="String.EndsWith(VideoPlayer.ChannelName,4K)">4k</value>
+	</variable>
+	<variable name="Video_Res_OSD_Flag_Var">
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,UHD)">uhd</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,4k)">4k</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,2160)">4k</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,1080)">hdtv</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,720)">hdtv</value>
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,576)">sd</value>
 	</variable>
 	<variable name="PVR_Subtitles_Flag_Var">
 		<value condition="String.IsEqual(VideoPlayer.SubtitlesLanguage,Eng)">cc1</value>
@@ -872,7 +903,7 @@
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Poster)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">$INFO[Window(Home).Property(SkinHelper.Player.Art.Poster)]</value>
 		<value condition="PVR.IsPlayingRadio">$VAR[PVR_MusicPlayerCoverVar]</value>
 	</variable>
-	<variable name="NowPlaying_PVRPoster_Local_Artwork_Var">
+	<variable name="NowPlaying_PVRPoster_Local_Artwork_Var"> 
        <value condition="!String.IsEmpty(VideoPlayer.Title) + Skin.HasSetting(Enable.Local.PVR.Artwork)">$VAR[PVR_Local_path]$INFO[VideoPlayer.Title,,/poster.jpg]</value>
     </variable>
 	
@@ -954,6 +985,7 @@
 		<value condition="ListItem.IsFinale">[B][COLOR button_focus][$LOCALIZE[849]] [/COLOR][/B]</value>
 		<value condition="ListItem.IsLive">[B][COLOR FFFDA700][$LOCALIZE[839]] [/COLOR][/B]</value>
 		<value condition="ListItem.IsNew">[B][COLOR yellow][$LOCALIZE[842]][/COLOR] [/B]</value>
+		
 	</variable>
 	<variable name="Text_Based_Premiere_Flags">
 		<value condition="String.StartsWith(ListItem.EpgEventTitle,New:)">icons/pvr/new.png</value>
@@ -968,6 +1000,7 @@
 		<value condition="String.EndsWith(ListItem.Plot,S9 Ep1)">icons/pvr/premier.png</value>
 		<value condition="String.EndsWith(ListItem.Plot,S10 Ep1)">icons/pvr/premier.png</value>
 		<value condition="String.EndsWith(ListItem.Plot,S11 Ep1)">icons/pvr/premier.png</value>
+		<value condition="String.StartsWith(ListItem.Genre,Movie)">icons/pvr/film.png</value> 
 	</variable>
 	<variable name="Text_Based_Premiere_Flags_TVGuide">
 		<value condition="String.EndsWith(ListItem.Plot,S1 Ep1)">[B][COLOR ffe00a0a][[/COLOR][COLOR white]$LOCALIZE[31227][/COLOR][COLOR ffe00a0a] $LOCALIZE[31229]] [/COLOR][/B]</value>
@@ -985,6 +1018,7 @@
 		<value condition="String.StartsWith(ListItem.Plot,1/4)">[B][COLOR ffe00a0a][[/COLOR][COLOR white]$LOCALIZE[31227][/COLOR][COLOR ffe00a0a] $LOCALIZE[31229]] [/COLOR][/B]</value>
 		<value condition="String.StartsWith(ListItem.Plot,1/5)">[B][COLOR ffe00a0a][[/COLOR][COLOR white]$LOCALIZE[31227][/COLOR][COLOR ffe00a0a] $LOCALIZE[31229]] [/COLOR][/B]</value>
 		<value condition="String.StartsWith(ListItem.Plot,1/6)">[B][COLOR ffe00a0a][[/COLOR][COLOR white]$LOCALIZE[31227][/COLOR][COLOR ffe00a0a] $LOCALIZE[31229]] [/COLOR][/B]</value>
+		<value condition="String.StartsWith(ListItem.Genre,Movie)">[B][COLOR cyan][$LOCALIZE[40409]] [/COLOR][/B]</value>
 	</variable>	
 	<variable name="EPG_Genre_Icon">
 		<value condition="String.StartsWith(ListItem.Genre,Movie) + !String.Contains(ListItem.Genre,Science Fiction)">Movie</value>
@@ -1124,8 +1158,34 @@
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
 		<value>$LOCALIZE[31000]...</value>
 	</variable>
-	<variable name="LiveTV_OSDSubLabelVar"> 
+	<variable name="LiveTV_OSDSubLabelVar">
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,([COLOR button_focus],[/COLOR]) ]$INFO[VideoPlayer.ChannelName] $INFO[VideoPlayer.EpisodeName, - ]</value>
+	</variable>
+	<variable name="LiveTV_OSD_Channel_Guide_SubLabelVar">
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,([COLOR button_focus],[/COLOR]) ]$INFO[VideoPlayer.ChannelName]</value>
+	</variable>
+	<variable name="LiveTV_OSDChannelNumberVar"> 
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,Ch ([COLOR button_focus],[/COLOR]) ]</value>
+	</variable>
+	<variable name="LiveTV_OSDChannelNameVar"> 
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelName]</value>
+	</variable>
+	<variable name="LiveTv_OSD_Down_Arrow_when_Paused">
+		<value condition="Player.Paused">$LOCALIZE[112]</value>
+		<value condition="Player.Paused">icons/keyboard/arrowdown.png</value>
+		<value>icons/keyboard/arrowdown.png</value>
+	</variable>
+	<variable name="LiveTv_OSD_Left_Direction_Arrow_when_Paused">
+		<value condition="Player.Paused">icons/osd/right_pointing_arrow.png</value>
+	</variable>
+	<variable name="LiveTv_OSD_Right_Direction_Arrow_when_Paused">
+		<value condition="Player.Paused">icons/osd/left_pointing_arrow.png</value>
+	</variable>
+	<variable name="LiveTv_Pause">
+		<value condition="Player.Paused">$LOCALIZE[112]</value>
+	</variable>
+	<variable name="LiveTv_Pause_image">
+		<value condition="Player.Paused">flags/playback/Paused-red.png</value> 
 	</variable>
 	<variable name="LiveTV_SeasonVar"> 
 		<value condition="!String.IsEmpty(ListItem.Season)">$INFO[ListItem.Season]</value>
@@ -1144,5 +1204,10 @@
 		<value condition="Skin.HasSetting(3_Hours)">3 Hours</value>
 		<value condition="Skin.HasSetting(4_Hours)">4 Hours</value>
 		<value>$LOCALIZE[40404]</value>
+	</variable>
+	<variable name="PVR_Now_Playing_Repeat_Flag_Var">
+		<value condition="!String.IsEmpty(VideoPlayer.Premiered) + !String.IsGreater(System.Date)">$INFO[VideoPlayer.Premiered,buttons/coloured-orange.png]</value>
+		
+		
 	</variable>
 </includes>

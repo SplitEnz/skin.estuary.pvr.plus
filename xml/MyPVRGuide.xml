@@ -216,7 +216,7 @@
 						<top>100</top>
 						<width>1550</width>
 						<height>130</height>
-						<label>$VAR[FlagLabel_TVGuide]$VAR[Text_Based_Premiere_Flags_TVGuide]$INFO[ListItem.Season,Season ,  ]$INFO[ListItem.Episode,Episode ,. ]$INFO[ListItem.Plot]</label>
+						<label>$VAR[FlagLabel_TVGuide]$VAR[Text_Based_Premiere_Flags_TVGuide]$INFO[ListItem.Season,Season ,  ]$INFO[ListItem.Episode,Episode , - ][COLOR grey][B]$INFO[ListItem.EpisodeName,(,). ][/B][/COLOR]$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 					

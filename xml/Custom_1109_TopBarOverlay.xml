@@ -219,6 +219,7 @@
 					<visible>!Window.IsActive(pvrosdchannels) + !Window.IsActive(pvrchannelguide) + VideoPlayer.Content(LiveTV)</visible>
 					<visible>String.IsEmpty(Player.Art(clearlogo))</visible>
 					<visible>String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
+					<visible>Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
 					<left>20</left>
 					<right>400</right>
@@ -282,7 +283,7 @@
 						<label>$INFO[System.Date]$INFO[Weather.Temperature, | ]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>100</height>
-						<width>500</width>
+						<width>520</width>
 						<visible>!Skin.HasSetting(Display_Weatherinfo_During_Playback)</visible>
 				</control>
 				<control type="grouplist">

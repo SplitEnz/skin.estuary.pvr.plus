@@ -13,7 +13,40 @@
 				<width>1550</width>
 				<height>343</height>
 				<top>-45</top>
-				<texture colordiffuse="80FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture>dialogs/dialog-bg-nobo.png</texture> 
+				<visible>!VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="image">
+				<left>370</left>
+				<width>1550</width>
+				<height>343</height>
+				<top>-45</top>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<visible>VideoPlayer.Content(livetv) + Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<width>110%</width>
+				<height>343</height>
+				<top>-45</top>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+			</control>
+			<control type="image" id="9876"> 
+				<left>42</left>
+				<bottom>195</bottom>
+				<width>315</width>
+				<height>450</height>
+				<texture fallback="DefaultPVRPoster.png">$VAR[PVR_Now_Playing_Poster_Var]</texture>  
+				<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+			</control>
+			<control type="image" id="9878"> 
+				<left>42</left>
+				<bottom>195</bottom>
+				<width>315</width>
+				<height>450</height>
+				<texture>$VAR[NowPlaying_PVRPoster_Local_Artwork_Var]</texture> 
+				<visible>VideoPlayer.Content(livetv) + !Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
 			</control>
 			
 			<control type="grouplist">

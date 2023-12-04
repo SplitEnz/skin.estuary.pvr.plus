@@ -287,6 +287,18 @@
 					<selected>!Skin.HasSetting(Show_NextUp_TV)</selected>
 					<onclick>Skin.ToggleSetting(Show_NextUp_TV)</onclick>
 				</control>
+				<control type="radiobutton" id="817">
+					<include>DefaultSettingButton</include>
+					<label>Display Channel Icon on PVR Channels OSD instead of PVR Poster Artwork</label>
+					<selected>Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD)</selected>
+					<onclick>Skin.ToggleSetting(Show_Channel_Icon_On_PVRChannels_OSD)</onclick>
+				</control>
+				<control type="radiobutton" id="818">
+					<include>DefaultSettingButton</include>
+					<label>Display Channel Number and Name on OSD instead of the top right Breadcrumb</label>
+					<selected>!Skin.HasSetting(Show_Channel_Name_On_OSD)</selected>
+					<onclick>Skin.ToggleSetting(Show_Channel_Name_On_OSD)</onclick>
+				</control>
 			</control>
 			
 			<control type="grouplist" id="600">

@@ -2,6 +2,8 @@
 <smartplaylist type="movies">
     <name>Movie Watchlist</name>
     <match>all</match>
+	<limit>30</limit>
+    <order direction="accending">random</order>
     <rule field="tag" operator="is">
         <value>Watchlist</value>
     </rule>
