@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.pvr.plus" version="0.3.2" name="Estuary PVR+" provider-name="Phil65, Team Kodi, Dumyat">
+<addon id="skin.estuary.pvr.plus" version="0.3.3" name="Estuary PVR+" provider-name="Phil65, Team Kodi, Dumyat">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/> 
 	</requires>

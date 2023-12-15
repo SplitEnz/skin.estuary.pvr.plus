@@ -1,4 +1,7 @@
 [B]0.3.2[/B]
+• New skin setting added to display Live TV Artwork as fanart/thumbnail format instead of poster artwork. 
+
+[B]0.3.2[/B]
 • Tweaks to OSD Info panel size and layout for Video and Live TV items. 
 • New option for Live TV to display controls OSD without PVR poster artwork and show channel number and channel name instead. This is now the default behaviour for Live TV. 
 • New skin setting added to display library stats on System Information window (Default setting is 'Off').
