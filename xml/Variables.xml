@@ -906,6 +906,9 @@
 	<variable name="NowPlaying_PVRPoster_Local_Artwork_Var"> 
        <value condition="!String.IsEmpty(VideoPlayer.Title) + Skin.HasSetting(Enable.Local.PVR.Artwork)">$VAR[PVR_Local_path]$INFO[VideoPlayer.Title,,/poster.jpg]</value>
     </variable>
+	<variable name="NowPlaying_PVRPoster_Local_Fanart_Format_Artwork_Var"> 
+       <value condition="!String.IsEmpty(VideoPlayer.Title) + Skin.HasSetting(Enable.Local.PVR.Artwork)">$VAR[PVR_Local_path]$INFO[VideoPlayer.Title,,/fanart.jpg]</value>
+    </variable>
 	
 	<!-- 'Now' PVR Artwork (List Item) -->
 	<variable name="NowPVRPoster_Backend_Var"> 
@@ -919,7 +922,10 @@
 	<variable name="NowPVRPoster_SkinHelper_Var">
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Poster)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Poster)]</value>
     </variable>
-	
+	<variable name="NowPVR_Fanart_Local_Artwork_Var">
+		<value condition="!String.IsEmpty(ListItem.EpgEventTitle) + Skin.HasSetting(Enable.Local.PVR.Artwork)">$VAR[PVR_Local_path]$INFO[ListItem.EpgEventTitle,,/fanart.jpg]</value>
+		<value condition="!String.IsEmpty(ListItem.Label) + Skin.HasSetting(Enable.Local.PVR.Artwork)">$VAR[PVR_Local_path]$INFO[ListItem.Label,,/fanart.jpg]</value>
+	</variable>
 	<!-- 'NextUp' PVR Artwork (List Item) -->
 	<variable name="NextPVRPoster_Local_Artwork_Var"> 
 		<value condition="!String.IsEmpty(ListItem.NextTitle) + Skin.HasSetting(Enable.Local.PVR.Artwork)">$VAR[PVR_Local_path]$INFO[ListItem.NextTitle,,/poster.jpg]</value>

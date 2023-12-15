@@ -66,7 +66,7 @@
 					<texture background="true">$VAR[NowPVRPoster_Backend_Var]</texture>
 					<include>OpenClose_Left</include>
 					<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122)</visible>
-					<visible>!Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD)</visible>
+					<visible>!Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 				</control>
 				<control type="image" id="9877">
 					<depth>DepthOSD+</depth>
@@ -78,7 +78,7 @@
 					<include>OpenClose_Left</include>
 					<visible>String.IsEmpty(Control.GetLabel(9876))</visible>
 					<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122)</visible>
-					<visible>!Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD)</visible>
+					<visible>!Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>
@@ -89,8 +89,24 @@
 					<texture background="true">$VAR[NowPVRPoster_Local_Artwork_Var]</texture>
 					<include>OpenClose_Left</include>
 					<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122)</visible>
-					<visible>!Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD)</visible>
+					<visible>!Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 				</control>
+				<control type="image" id="9876"> 
+					<left>15</left>
+					<bottom>70</bottom>
+					<width>335</width>
+					<height>210</height>
+					<texture fallback="defaultpvrfanartformat.png">$VAR[NowPVRPoster_Backend_Var]</texture>  
+					<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible> 
+				</control>
+			<control type="image" id="9878"> 
+					<left>15</left>
+					<bottom>70</bottom>
+					<width>335</width>
+					<height>210</height>
+					<texture>$VAR[NowPVR_Fanart_Local_Artwork_Var]</texture> 
+					<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
+			</control>
 				<control type="image">
 					<left>30</left>
 					<bottom>35</bottom>
@@ -100,7 +116,7 @@
 					<texture>$INFO[listitem.icon]</texture>
 					<include>OpenClose_Left</include>
 					<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122)</visible>
-					<visible>Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD)</visible>
+					<visible>Skin.HasSetting(Show_Channel_Icon_On_PVRChannels_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 				</control>
 				<control type="image">
 					<depth>DepthOSD+</depth>

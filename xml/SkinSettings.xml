@@ -205,7 +205,7 @@
 					<include>DefaultSettingButton</include>
 					<label>Use Local PVR Artwork</label>
 					<selected>Skin.HasSetting(Enable.Local.PVR.Artwork)</selected>
-					<onclick>Skin.ToggleSetting(Enable.Local.PVR.Artwork)</onclick>Skin.HasSetting(Enable.Local.Animated.PVR.Artwork)
+					<onclick>Skin.ToggleSetting(Enable.Local.PVR.Artwork)</onclick>
 				</control>
 				<control type="button" id="804">
 					<label>Set Path For Local PVR Artwork</label>
@@ -213,6 +213,12 @@
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(Local.PVR.Artwork)</selected>
 					<onclick>Skin.SetPath(Local.PVR.Artwork)</onclick>
+				</control>
+				<control type="radiobutton" id="805">
+					<include>DefaultSettingButton</include>
+					<label>Display Landscape format artwork instead of PVR Poster artwork</label>
+					<selected>Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</selected>
+					<onclick>Skin.ToggleSetting(Display_Landscape_Format_Artwork_LiveTV)</onclick>
 				</control>
 				<control type="radiobutton" id="807">
 					<include>DefaultSettingButton</include>

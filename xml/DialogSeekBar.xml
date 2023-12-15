@@ -323,7 +323,7 @@
 				<texture fallback="DefaultPVRPoster.png">$VAR[PVR_Now_Playing_Poster_Var]</texture>  
 				<visible>[Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo)] + VideoPlayer.Content(LiveTV) + MusicPlayer.Content(livetv) + String.IsEmpty(Control.GetLabel(9878))</visible>
 				<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | !Player.Seeking | !Player.DisplayAfterSeek | !Player.Forwarding | !Player.Rewinding | !Player.Paused</visible>
-				<visible>Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+				<visible>Skin.HasSetting(Show_Channel_Name_On_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 			</control>
 			
 			<control type="image" id="9878"> 
@@ -334,7 +334,28 @@
 				<texture>$VAR[NowPlaying_PVRPoster_Local_Artwork_Var]</texture> 
 				<visible>[Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo)] + VideoPlayer.Content(LiveTV) + MusicPlayer.Content(livetv)</visible>
 				<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | !Player.Seeking | !Player.DisplayAfterSeek | !Player.Forwarding | !Player.Rewinding | !Player.Paused</visible>
-				<visible>Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+				<visible>Skin.HasSetting(Show_Channel_Name_On_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
+			</control>
+			<control type="image" id="9876"> 
+				<left>20</left>
+				<bottom>20</bottom>
+				<width>350</width>
+				<height>475</height>
+				<texture fallback="DefaultPVRPoster.png">$VAR[PVR_Now_Playing_Poster_Var]</texture>  
+				<visible>[Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo)] + VideoPlayer.Content(LiveTV) + MusicPlayer.Content(livetv) + String.IsEmpty(Control.GetLabel(9878))</visible>
+				<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | !Player.Seeking | !Player.DisplayAfterSeek | !Player.Forwarding | !Player.Rewinding | !Player.Paused</visible>
+				<visible>Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
+			</control>
+			
+			<control type="image" id="9878"> 
+				<left>20</left>
+				<bottom>20</bottom>
+				<width>350</width>
+				<height>475</height>
+				<texture>$VAR[NowPlaying_PVRPoster_Local_Artwork_Var]</texture> 
+				<visible>[Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo)] + VideoPlayer.Content(LiveTV) + MusicPlayer.Content(livetv)</visible>
+				<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | !Player.Seeking | !Player.DisplayAfterSeek | !Player.Forwarding | !Player.Rewinding | !Player.Paused</visible>
+				<visible>Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 			</control>
 		<!-- PVR Channel Name Details on OSD -->
 		<control type="group">
@@ -740,7 +761,7 @@
 				<height>260</height>
 				<top>-33</top>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<visible>!String.IsEmpty(VideoPlayer.Season) + Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Season) + Skin.HasSetting(Show_Channel_Name_On_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 			</control>
 			<control type="image">
 				<left>370</left>
@@ -748,7 +769,23 @@
 				<height>224</height>
 				<top>3</top>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<visible>String.IsEmpty(VideoPlayer.Season) + Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+				<visible>String.IsEmpty(VideoPlayer.Season) + Skin.HasSetting(Show_Channel_Name_On_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
+			</control>
+			<control type="image">
+				<left>370</left>
+				<width>1550</width>
+				<height>260</height>
+				<top>-33</top>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<visible>!String.IsEmpty(VideoPlayer.Season) + Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
+			</control>
+			<control type="image">
+				<left>370</left>
+				<width>1550</width>
+				<height>224</height>
+				<top>3</top>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<visible>String.IsEmpty(VideoPlayer.Season) + Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -772,7 +809,7 @@
 				<width>315</width>
 				<height>440</height>
 				<texture fallback="DefaultPVRPoster.png">$VAR[PVR_Now_Playing_Poster_Var]</texture>  
-				<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD)</visible> 
+				<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible> 
 			</control>
 			<control type="image" id="9878"> 
 				<left>55</left>
@@ -780,7 +817,23 @@
 				<width>315</width>
 				<height>440</height>
 				<texture>$VAR[NowPlaying_PVRPoster_Local_Artwork_Var]</texture> 
-				<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
+				<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD) + !Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
+			</control>
+			<control type="image" id="9876"> 
+				<left>45</left>
+				<bottom>165</bottom>
+				<width>325</width>
+				<height>200</height>
+				<texture fallback="defaultpvrfanartformat.png">$VAR[PVR_Now_Playing_Poster_Var]</texture>  
+				<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible> 
+			</control>
+			<control type="image" id="9878"> 
+				<left>45</left>
+				<bottom>165</bottom>
+				<width>325</width>
+				<height>200</height>
+				<texture>$VAR[NowPlaying_PVRPoster_Local_Fanart_Format_Artwork_Var]</texture> 
+				<visible>!Skin.HasSetting(Show_Channel_Name_On_OSD) + Skin.HasSetting(Display_Landscape_Format_Artwork_LiveTV)</visible>
 			</control>
 			<include>PVRInfoPanelFurniture</include>
 			<control type="label">
