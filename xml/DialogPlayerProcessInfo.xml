@@ -11,16 +11,16 @@
 			<control type="image">
 				<left>370</left>
 				<width>1550</width>
-				<height>343</height>
-				<top>-45</top>
+				<height>316</height>
+				<top>-20</top>
 				<texture>dialogs/dialog-bg-nobo.png</texture> 
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="image">
 				<left>370</left>
 				<width>1550</width>
-				<height>343</height>
-				<top>-45</top>
+				<height>321</height>
+				<top>-25</top>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<visible>VideoPlayer.Content(livetv) + Skin.HasSetting(Show_Channel_Name_On_OSD)</visible>
 			</control>
@@ -51,7 +51,7 @@
 			
 			<control type="grouplist">
 				<left>420</left>
-				<top>-30</top>
+				<top>-15</top>
 				<visible>Control.HasFocus(5551)</visible>
 				<control type="label">
 					<width>1200</width>
@@ -104,7 +104,7 @@
 			</control>
 			<control type="grouplist">
 				<left>1250</left>
-				<top>-30</top>
+				<top>-15</top>
 				<visible>Control.HasFocus(5551)</visible>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="label">
@@ -163,7 +163,7 @@
 			</control>
 			<control type="grouplist">
 				<left>420</left>
-				<top>-30</top>
+				<top>-15</top>
 				<visible>Control.HasFocus(5552)</visible>
 				<control type="label">
 					<width>1600</width>

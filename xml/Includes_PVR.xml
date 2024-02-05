@@ -573,13 +573,34 @@
 				</control>
 				<control type="progress">
 					<left>425</left>
+					<top>$PARAM[ts_bar_top]</top>
+					<width>720</width>
+					<height>$PARAM[ts_bar_height]</height>
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+					<texturebg border="" colordiffuse="00FFFFFF">colors/white50.png</texturebg>  
+					<midtexture>colors/red.png</midtexture>
+				</control>
+				<control type="progress">
+					<left>425</left>
+					<top>84</top>
+					<width>720</width>
+					<height>2</height>
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+					<texturebg border="2" colordiffuse="00FFFFFF">colors/white50.png</texturebg> 
+					<midtexture border="1">progress/red2.png</midtexture>
+					<visible>false</visible>
+				</control>
+				<control type="progress">
+					<left>425</left>
 					<top>84</top>
 					<width>720</width>
 					<height>2</height>
 					<info2>PVR.TimeshiftProgressPlayPos</info2>
 					<info>PVR.TimeshiftProgressEpgEnd</info>
 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg> 
-					
+					<visible>false</visible>
 				</control>
 			</control>
 			<control type="progress">
@@ -589,8 +610,8 @@
 				<height>$PARAM[ts_bar_height]</height>
 				<info2>PVR.TimeshiftProgressBufferStart</info2>
 				<info>PVR.TimeshiftProgressBufferEnd</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="green">colors/white.png</midtexture>	
+				<texturebg border="" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<midtexture>colors/limegreen.png</midtexture>	
 				<visible>Player.SeekEnabled</visible>
 			</control>
 		</control>
@@ -1543,7 +1564,7 @@
 				<onup>$PARAM[control_onup_id]</onup>
 				<ondown>$PARAM[control_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
-				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="button_focus">$PARAM[progress_texture]</progresstexture>
+				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="white50">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1400" height="45" condition="$PARAM[has_rulerdate_layout]">
 					<control type="label">
 						<width>1700</width>

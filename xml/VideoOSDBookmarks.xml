@@ -20,8 +20,8 @@
 			<control type="image">
 				<left>370</left>
 				<width>1550</width>
-				<height>343</height>
-				<top>-45</top>
+				<height>316</height>
+				<top>-20</top>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 			</control>
 				<control type="image">
@@ -38,7 +38,7 @@
 				<visible>Skin.HasSetting(osd_type)</visible>
 			</control>
 			<control type="textbox">
-				<left>130</left>
+				<left>165</left>
 				<top>-30</top>
 				<width>1920</width>
 				<height>325</height>
@@ -50,8 +50,8 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<orientation>horizontal</orientation>
-				<left>130</left>
-				<top>-135</top>
+				<left>165</left>
+				<top>-110</top>
 				<width>100%</width>
 				<align>center</align>
 				<height>100</height>

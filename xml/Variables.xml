@@ -1171,7 +1171,7 @@
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,([COLOR button_focus],[/COLOR]) ]$INFO[VideoPlayer.ChannelName]</value>
 	</variable>
 	<variable name="LiveTV_OSDChannelNumberVar"> 
-		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,Ch ([COLOR button_focus],[/COLOR]) ]</value>
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,Ch ([COLOR button_focus],[/COLOR])]</value>
 	</variable>
 	<variable name="LiveTV_OSDChannelNameVar"> 
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelName]</value>

@@ -283,7 +283,7 @@
 						<label>$INFO[System.Date]$INFO[Weather.Temperature, | ]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>100</height>
-						<width>520</width>
+						<width>530</width>
 						<visible>!Skin.HasSetting(Display_Weatherinfo_During_Playback)</visible>
 				</control>
 				<control type="grouplist">
