@@ -1,4 +1,9 @@
-[B]0.3.2[/B]
+[B]0.3.4[/B]
+• Height fixed for Bookmark and player process info panels.
+• Amount of TV timeshift available changed to to limegreen colour and amount of timeshift unavailable changed to bright red colour.
+• Colour of EPG progress indicator changed to white to give better visibility 
+
+[B]0.3.3[/B]
 • New skin setting added to display Live TV Artwork as fanart/thumbnail format instead of poster artwork. 
 
 [B]0.3.2[/B]
