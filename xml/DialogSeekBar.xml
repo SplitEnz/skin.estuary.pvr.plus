@@ -409,7 +409,7 @@
 			<control type="label" id="40000">
 				<left>158</left>
 				<aligny>center</aligny>
-				<bottom>17</bottom>
+				<bottom>12</bottom>
 				<height>60</height>
 				<label>$VAR[LiveTv_Pause]</label>
 				<textcolor>red</textcolor>
@@ -436,7 +436,7 @@
 			<control type="image"> 
 				<left>73</left>
 				<aligny>center</aligny>
-				<bottom>14</bottom>
+				<bottom>9</bottom>
 				<height>65</height>
 				<width>100</width>
 				<texture>$VAR[LiveTv_OSD_Left_Direction_Arrow_when_Paused]</texture>   
@@ -447,7 +447,7 @@
 			<control type="image"> 
 				<left>242</left>
 				<aligny>center</aligny>
-				<bottom>14</bottom>
+				<bottom>9</bottom>
 				<height>65</height>
 				<width>100</width>
 				<texture>$VAR[LiveTv_OSD_Right_Direction_Arrow_when_Paused]</texture>   
