@@ -9,8 +9,8 @@
 			<control type="image">
 				<left>370</left>
 				<width>1550</width>
-				<height>350</height>
-				<bottom>170</bottom>
+				<height>347</height>
+				<bottom>173</bottom>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="textbox">
