@@ -1696,12 +1696,13 @@
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
-						<left>-4</left>
-						<top>2</top>
+						<left>0</left>
+						<top>5</top>
 						<width>60</width>
-						<height>50</height>
+						<height>55</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[PremieredFlags]</texture>
+						<visible>!Integer.IsLess(ListItem.Duration(mins),6) + ListItem.IsLive</visible>
 						<visible>!Skin.HasSetting(Display_Premiered_Flags)</visible>
 					</control>
 					<control type="image">
@@ -1716,10 +1717,10 @@
 					</control>
 					<control type="image">
 						<visible>!ListItem.IsNew</visible>
-						<left>-4</left>
-						<top>2</top>
+						<left>0</left>
+						<top>5</top>
 						<width>60</width>
-						<height>50</height>
+						<height>55</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[Text_Based_Premiere_Flags]</texture>
 						<visible>!Skin.HasSetting(Display_Premiered_Flags)</visible>
@@ -1730,7 +1731,8 @@
 						<width>19</width>
 						<height>19</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
-						<animation effect="slide" start="0,0" end="30,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive | string.EndsWith(ListItem.Plot,S1 Ep1) | String.EndsWith(ListItem.Plot,S2 Ep1) | String.EndsWith(ListItem.Plot,S3 Ep1) | String.EndsWith(ListItem.Plot,S4 Ep1) | String.EndsWith(ListItem.Plot,S5 Ep1) | String.EndsWith(ListItem.Plot,S6 Ep1) | String.EndsWith(ListItem.Plot,S7 Ep1) | String.EndsWith(ListItem.Plot,S8 Ep1) | String.EndsWith(ListItem.Plot,S9 Ep1) | String.EndsWith(ListItem.Plot,S10 Ep1) | String.EndsWith(ListItem.Plot,S11 Ep1) | String.EndsWith(ListItem.Plot,S12 Ep1) | String.StartsWith(ListItem.Genre,Movie)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="30,0" condition="Integer.IsGreater(ListItem.Duration(mins),10) + [ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive | string.EndsWith(ListItem.Plot,S1 Ep1) | String.EndsWith(ListItem.Plot,S2 Ep1) | String.EndsWith(ListItem.Plot,S3 Ep1) | String.EndsWith(ListItem.Plot,S4 Ep1) | String.EndsWith(ListItem.Plot,S5 Ep1) | String.EndsWith(ListItem.Plot,S6 Ep1) | String.EndsWith(ListItem.Plot,S7 Ep1) | String.EndsWith(ListItem.Plot,S8 Ep1) | String.EndsWith(ListItem.Plot,S9 Ep1) | String.EndsWith(ListItem.Plot,S10 Ep1) | String.EndsWith(ListItem.Plot,S11 Ep1) | String.EndsWith(ListItem.Plot,S12 Ep1) | String.StartsWith(ListItem.Genre,Movie)]">Conditional</animation>
+						<animation effect="slide" start="0,0" end="25,0" condition="Integer.IsLess(ListItem.Duration(mins),11) + Integer.IsGreater(ListItem.Duration(mins),5) + [ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive | string.EndsWith(ListItem.Plot,S1 Ep1) | String.EndsWith(ListItem.Plot,S2 Ep1) | String.EndsWith(ListItem.Plot,S3 Ep1) | String.EndsWith(ListItem.Plot,S4 Ep1) | String.EndsWith(ListItem.Plot,S5 Ep1) | String.EndsWith(ListItem.Plot,S6 Ep1) | String.EndsWith(ListItem.Plot,S7 Ep1) | String.EndsWith(ListItem.Plot,S8 Ep1) | String.EndsWith(ListItem.Plot,S9 Ep1) | String.EndsWith(ListItem.Plot,S10 Ep1) | String.EndsWith(ListItem.Plot,S11 Ep1) | String.EndsWith(ListItem.Plot,S12 Ep1) | String.StartsWith(ListItem.Genre,Movie)]">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="62" width="60">
@@ -1738,7 +1740,7 @@
 						<top>2</top>
 						<left>2</left>
 						<width>54</width>
-						<height>54</height>
+						<height>58</height>
 						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
@@ -1782,13 +1784,14 @@
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
-						<left>-2</left>
-						<top>4</top>
+						<left>0</left>
+						<top>5</top>
 						<width>60</width>
 						<height>55</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[PremieredFlags]</texture>
 						<visible>!Skin.HasSetting(Display_Premiered_Flags)</visible>
+						<visible>!Integer.IsLess(ListItem.Duration(mins),6) + ListItem.IsLive</visible>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
@@ -1802,8 +1805,8 @@
 					</control>
 					<control type="image">
 						<visible>!ListItem.IsNew</visible>
-						<left>-2</left>
-						<top>4</top>
+						<left>0</left>
+						<top>5</top>
 						<width>60</width>
 						<height>55</height>
 						<aspectratio>keep</aspectratio>
@@ -1816,7 +1819,8 @@
 						<width>19</width>
 						<height>19</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
-						<animation effect="slide" start="0,0" end="30,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive | string.EndsWith(ListItem.Plot,S1 Ep1) | String.EndsWith(ListItem.Plot,S2 Ep1) | String.EndsWith(ListItem.Plot,S3 Ep1) | String.EndsWith(ListItem.Plot,S4 Ep1) | String.EndsWith(ListItem.Plot,S5 Ep1) | String.EndsWith(ListItem.Plot,S6 Ep1) | String.EndsWith(ListItem.Plot,S7 Ep1) | String.EndsWith(ListItem.Plot,S8 Ep1) | String.EndsWith(ListItem.Plot,S9 Ep1) | String.EndsWith(ListItem.Plot,S10 Ep1) | String.EndsWith(ListItem.Plot,S11 Ep1) | String.EndsWith(ListItem.Plot,S12 Ep1) | String.StartsWith(ListItem.Genre,Movie)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="30,0" condition="Integer.IsGreater(ListItem.Duration(mins),10) + [ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive | string.EndsWith(ListItem.Plot,S1 Ep1) | String.EndsWith(ListItem.Plot,S2 Ep1) | String.EndsWith(ListItem.Plot,S3 Ep1) | String.EndsWith(ListItem.Plot,S4 Ep1) | String.EndsWith(ListItem.Plot,S5 Ep1) | String.EndsWith(ListItem.Plot,S6 Ep1) | String.EndsWith(ListItem.Plot,S7 Ep1) | String.EndsWith(ListItem.Plot,S8 Ep1) | String.EndsWith(ListItem.Plot,S9 Ep1) | String.EndsWith(ListItem.Plot,S10 Ep1) | String.EndsWith(ListItem.Plot,S11 Ep1) | String.EndsWith(ListItem.Plot,S12 Ep1) | String.StartsWith(ListItem.Genre,Movie)]">Conditional</animation>
+						<animation effect="slide" start="0,0" end="25,0" condition="Integer.IsLess(ListItem.Duration(mins),11) + Integer.IsGreater(ListItem.Duration(mins),5) + [ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive | string.EndsWith(ListItem.Plot,S1 Ep1) | String.EndsWith(ListItem.Plot,S2 Ep1) | String.EndsWith(ListItem.Plot,S3 Ep1) | String.EndsWith(ListItem.Plot,S4 Ep1) | String.EndsWith(ListItem.Plot,S5 Ep1) | String.EndsWith(ListItem.Plot,S6 Ep1) | String.EndsWith(ListItem.Plot,S7 Ep1) | String.EndsWith(ListItem.Plot,S8 Ep1) | String.EndsWith(ListItem.Plot,S9 Ep1) | String.EndsWith(ListItem.Plot,S10 Ep1) | String.EndsWith(ListItem.Plot,S11 Ep1) | String.EndsWith(ListItem.Plot,S12 Ep1) | String.StartsWith(ListItem.Genre,Movie)]">Conditional</animation>
 					</control>
 				</focusedlayout>
 			</control>
