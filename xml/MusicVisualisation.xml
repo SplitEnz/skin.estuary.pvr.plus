@@ -96,13 +96,13 @@
 					<left>-80</left>
 					<top>255</top>
 					<width>1450</width>
-					<height>40</height>
+					<height>48</height>
 					<align>left</align>
 					<orientation>horizontal</orientation>
-					<itemgap>20</itemgap>
+					<itemgap>5</itemgap>
 					<control type="label">
 						<width min="0" max="1130">auto</width>
-						<height>40</height>
+						<height>48</height>
 						<label>$INFO[MusicPlayer.Genre]</label>
 						<font>font37</font>
 						<shadowcolor>black</shadowcolor>
@@ -113,7 +113,7 @@
 					</control>
 					<control type="image">
 						<width>190</width>
-						<height>40</height>
+						<height>45</height>
 						<texture fallback="flags/starrating/0.png" colordiffuse="yellow">$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
 						<aspectratio>keep</aspectratio>
 						<aligny>center</aligny>

@@ -5,78 +5,62 @@
 	<controls>
 		<visible>Player.HasAudio</visible>
 		<control type="group">
-			<bottom>38</bottom>
-			<height>460</height>
+			<bottom>159</bottom>
+			<height>260</height>
 			<control type="image">
+				<top>0</top>
 				<left>410</left>
 				<width>1515</width>
-				<height>365</height>
-				<top>-37</top>
+				<height>245</height>
 				<texture colordiffuse="80FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			
 			<control type="image">
-				<top>-20</top>
+				<top>0</top>
 				<left>435</left>
 				<width>60</width>
 				<height>60</height>
 				<texture>DefaultArtist.png</texture>
 			</control>
-			<control type="label"> 
+			<control type="label">
+				<top>0</top>
 				<left>495</left>
-				<top>-20</top>
 				<height>290</height>
 				<width>1000</width>
 				<font>font45</font>
-				<label>[B][COLOR button_focus]$INFO[MusicPlayer.Artist,][/COLOR][/B]</label>
+				<label>$INFO[MusicPlayer.Artist,]</label>
 				<shadowcolor>black</shadowcolor>
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				<visible>Player.HasAudio + Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>	
 			</control>
-			<control type="image">
-				<top>15</top>
-				<left>435</left>
-				<width>30</width>
-				<height>30</height>
-				<texture>DefaultDrama.png</texture>
-				<visible>false</visible>
-			</control>
+			
+			
+			
 			<control type="label">
-				<left>495</left> 
-				<top>35</top>
-				<height>290</height>
-				<font>font12</font>
-			<label>[B][COLOR button_focus] $INFO[MusicPlayer.Genre][/COLOR][/B]</label>
-			<shadowcolor>black</shadowcolor>
-			<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
-			<visible>Player.HasAudio + Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
-			<visible>false</visible>
-			</control>
-			<control type="label">
-				<top>-10</top>
+				<top>0</top>
 				<right>30</right>
 				<align>right</align>
 				<height>40</height>
 				<font>font12</font>
-				<label>[COLOR white]$INFO[MusicPlayer.Property(Artist_Formed, [COLOR button_focus]Formed: [/COLOR]] [COLOR white]$INFO[MusicPlayer.Property(Artist_Born,[COLOR button_focus]Born: [/COLOR]][/COLOR] [COLOR white]$INFO[MusicPlayer.Property(Artist_Died,[COLOR button_focus]Died: [/COLOR]][/COLOR]</label>
+				<label>[COLOR white]$INFO[MusicPlayer.Property(Artist_Formed,[COLOR button_focus]Formed: [/COLOR]][COLOR white]$INFO[MusicPlayer.Property(Artist_Born,[COLOR button_focus]Born: [/COLOR]][/COLOR][COLOR white]$INFO[MusicPlayer.Property(Artist_Died,[COLOR button_focus] Died: [/COLOR]][/COLOR]</label>
 				<visible>Player.HasAudio + Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 			</control>
 			<control type="label">
-				<top>25</top>
+				<top>35</top>
 				<right>30</right>
 				<align>right</align>
 				<height>40</height>
 				<font>font12</font>
-				<label>[COLOR white]$INFO[MusicPlayer.Property(Artist_YearsActive,[COLOR button_focus]Years Active: [/COLOR]]  [COLOR white]$INFO[MusicPlayer.Property(Artist_Disbanded,[COLOR button_focus]Disbanded: [/COLOR]][/COLOR]</label> 
+				<label>[COLOR white]$INFO[MusicPlayer.Property(Artist_YearsActive,[COLOR button_focus]Years Active: [/COLOR]][COLOR white]$INFO[MusicPlayer.Property(Artist_Disbanded,[COLOR button_focus] Disbanded: [/COLOR]][/COLOR]</label> 
 				<visible>Player.HasAudio + Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 			</control>
 			<control type="textbox">
+				<top>80</top>
 				<left>440</left>
-				<top>65</top>
 				<right>30</right>
-				<height>245</height>
+				<height>165</height>
 				<width>1460</width>
-				<align>justify</align>
+				
 				<font>fontplot</font>
 				<label>$INFO[MusicPlayer.Property(Artist_Description)]</label>
 				<autoscroll delay="3000" time="5000" repeat="8000">true</autoscroll>
@@ -95,7 +79,7 @@
 			<control type="grouplist" id="9001">
 				<orientation>horizontal</orientation>
 				<left>400</left>
-				<bottom>485</bottom>
+				<bottom>250</bottom>
 				<width>1000</width>
 				<height>100</height>
 				<align>left</align>

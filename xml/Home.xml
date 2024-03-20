@@ -1017,7 +1017,7 @@
 				<include content="ContentPanel">
 					<param name="width" value="522" />
 				</include>
-				<control type="fixedlist" id="9000">
+				<control type="fixedlist" id="9000"> 
 					<left>0</left>
 					<top>240</top>
 					<width>462</width>

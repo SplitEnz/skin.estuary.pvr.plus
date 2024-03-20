@@ -152,8 +152,13 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="150" />
-						<param name="label" value="[B][COLOR button_focus]$LOCALIZE[21875]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.ListItem.Country]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Country))" />
+						<param name="label" value="[B][COLOR button_focus]Premiered: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.ListItem.Premiered)]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Premiered))" />
+					</include>
+					<include content="InfoDialogMetadata">
+						<param name="control_id" value="151" />
+						<param name="label" value="[B][COLOR button_focus]$LOCALIZE[126]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.ListItem.Status]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Status))" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="152" />
@@ -162,13 +167,8 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="153" />
-						<param name="label" value="[B][COLOR button_focus]Premiered: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.ListItem.Premiered]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Premiered))" />
-					</include>
-					<include content="InfoDialogMetadata">
-						<param name="control_id" value="154" />
-						<param name="label" value="[B][COLOR button_focus]$LOCALIZE[126]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.ListItem.Status]" />
-						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Status))" />
+						<param name="label" value="[B][COLOR button_focus]$LOCALIZE[21875]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.ListItem.Country]" />
+						<param name="visible" value="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Country))" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="155" />
@@ -209,7 +209,7 @@
 								<width>200</width>
 								<height>37</height>
 								<font>font12</font>
-								<label>$INFO[ListItem.Votes]</label>
+								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Votes, Votes (,)]</label>
 							</control>
 				</control>
 				
