@@ -1,3 +1,7 @@
+[B]0.3.5[/B]
+• Revert Artist Name colour on music Artist BIO panel to 'Colour-Focus' and 'Bold'
+• EOL development for Kodi Matrix. Next release will be for Kodi Nexus.
+
 [B]0.3.4[/B]
 • Height fixed for Bookmark and player process info panels.
 • Amount of TV timeshift available changed to to limegreen colour and amount of timeshift unavailable changed to bright red colour.
