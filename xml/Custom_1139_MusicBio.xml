@@ -28,7 +28,7 @@
 				<height>290</height>
 				<width>1000</width>
 				<font>font45</font>
-				<label>$INFO[MusicPlayer.Artist,]</label>
+				<label>[B][COLOR button_focus]$INFO[MusicPlayer.Artist,][/COLOR][/B]</label>
 				<shadowcolor>black</shadowcolor>
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				<visible>Player.HasAudio + Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>	
